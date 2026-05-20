@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Silent Auction · Civic League of Gulfport</title>
+  <meta name="description" content="The Civic League of Gulfport Silent Auction — beautiful gifts, art, and experiences donated by Gulf Coast neighbors and businesses, all benefiting the League's projects and scholarships." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .ribbon {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold-500), var(--gold-600));
+      color: #2a1d00;
+      font-weight: 700;
+      font-family: var(--sans);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      padding: 8px 18px;
+      border-radius: 4px;
+      box-shadow: 0 6px 16px rgba(210,162,0,0.35);
+    }
+    .auction-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .auction-card__art .swirl {
+      width: 60%; opacity: 0.9;
+    }
+    .pill {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--green-50);
+      color: var(--green-800);
+      border-radius: 999px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Civic League of Gulfport home">
+        <img class="brand__mark" src="assets/logo.svg" alt="" />
+        <span class="brand__text">
+          <span class="brand__name">Civic League of Gulfport</span>
+          <span class="brand__sub">Since 1947 · Mississippi</span>
+        </span>
+      </a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="scholarship.html">Scholarship</a>
+        <a href="christmas-tour.html">Tour of Homes</a>
+        <a href="silent-auction.html">Silent Auction</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="eyebrow">Annual Fundraiser</div>
+        <h1>The Silent Auction</h1>
+        <p style="max-width:720px;margin:14px auto 0;">A treasury of gifts, art, and experiences — donated by Gulf Coast neighbors and businesses, gathered each fall, and shared at the Christmas Tour of Homes.</p>
+        <div class="btn-row" style="justify-content:center;margin-top:22px;">
+          <span class="ribbon">Bidding opens December 7</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="reveal">
+          <h2>How it works</h2>
+          <p>Items are collected from local artists and businesses each October and November, then displayed at the Christmas Tour of Homes on the first Sunday of December.</p>
+          <p>Tour-goers place written bids on the items they love most through the afternoon. The highest bid at closing wins — and every dollar goes straight back to the projects and scholarships the League supports throughout the year.</p>
+          <ul class="bullet-list">
+            <li>Browse items at any home on the Tour</li>
+            <li>Write your bid &amp; contact info</li>
+            <li>Winners notified the same evening</li>
+            <li>Cash, check, or card accepted</li>
+          </ul>
+        </div>
+        <div class="media-frame media-frame--ornament reveal" aria-hidden="true">
+          <img src="assets/logo.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">A preview</div>
+          <h2>The kind of treasures you'll find</h2>
+          <div class="flourish" aria-hidden="true">✦</div>
+          <p>A taste of what graces our auction tables — actual items and bidding open in December.</p>
+        </div>
+
+        <div class="auction-grid">
+          <article class="auction-card reveal">
+            <div class="auction-card__art" aria-hidden="true">
+              <svg viewBox="0 0 80 80" class="swirl"><circle cx="40" cy="40" r="22" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="40" cy="40" r="10" fill="currentColor"/></svg>
+            </div>
+            <div class="auction-card__body">
+              <span class="pill">Art</span>
+              <h3>Gulf Coast Painting</h3>
+              <p>An original oil from a beloved Mississippi artist — a quiet morning on the Sound.</p>
+              <div class="auction-card__meta">Donated by a local studio</div>
+              <div class="auction-card__price">Starting bid · $75</div>
+            </div>
+          </article>
+
+          <article class="auction-card reveal">
+            <div class="auction-card__art" aria-hidden="true">
+              <svg viewBox="0 0 80 80" class="swirl"><path d="M20 60 Q40 10 60 60" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="40" cy="30" r="4" fill="currentColor"/></svg>
+            </div>
+            <div class="auction-card__body">
+              <span class="pill">Pottery</span>
+              <h3>Hand-Thrown Vase</h3>
+              <p>A signature piece from one of our member potters, glazed in gulf-coast blues.</p>
+              <div class="auction-card__meta">Donated by Mary Joyce Pottery</div>
+              <div class="auction-card__price">Starting bid · $40</div>
+            </div>
+          </article>
+
+          <article class="auction-card reveal">
+            <div class="auction-card__art" aria-hidden="true">
+              <svg viewBox="0 0 80 80" class="swirl"><rect x="22" y="22" width="36" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><path d="M30 40h20M40 30v20" stroke="currentColor" stroke-width="3"/></svg>
+            </div>
+            <div class="auction-card__body">
+              <span class="pill">Experience</span>
+              <h3>Dinner for Two</h3>
+              <p>A gift certificate to one of Gulfport's favorite restaurants — a perfect winter evening out.</p>
+              <div class="auction-card__meta">Donated by a Gulf Coast bistro</div>
+              <div class="auction-card__price">Starting bid · $50</div>
+            </div>
+          </article>
+
+          <article class="auction-card reveal">
+            <div class="auction-card__art" aria-hidden="true">
+              <svg viewBox="0 0 80 80" class="swirl"><path d="M20 50 Q40 20 60 50" fill="none" stroke="currentColor" stroke-width="3"/><path d="M30 50v8M40 50v10M50 50v8" stroke="currentColor" stroke-width="3"/></svg>
+            </div>
+            <div class="auction-card__body">
+              <span class="pill">Holiday</span>
+              <h3>Christmas Wreath Basket</h3>
+              <p>A handmade evergreen wreath paired with sparkling cider, cookies, and stocking stuffers.</p>
+              <div class="auction-card__meta">Donated by League members</div>
+              <div class="auction-card__price">Starting bid · $35</div>
+            </div>
+          </article>
+
+          <article class="auction-card reveal">
+            <div class="auction-card__art" aria-hidden="true">
+              <svg viewBox="0 0 80 80" class="swirl"><path d="M20 40 L40 20 L60 40 L40 60 Z" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="40" cy="40" r="6" fill="currentColor"/></svg>
+            </div>
+            <div class="auction-card__body">
+              <span class="pill">Jewelry</span>
+              <h3>Heirloom Brooch</h3>
+              <p>A donated vintage piece in green and gold — fitting, of course.</p>
+              <div class="auction-card__meta">Member donation</div>
+              <div class="auction-card__price">Starting bid · $60</div>
+            </div>
+          </article>
+
+          <article class="auction-card reveal">
+            <div class="auction-card__art" aria-hidden="true">
+              <svg viewBox="0 0 80 80" class="swirl"><circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="3"/><path d="M30 40 L36 46 L52 30" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+            </div>
+            <div class="auction-card__body">
+              <span class="pill">Wellness</span>
+              <h3>Spa &amp; Salon Day</h3>
+              <p>A pampering package from a partner salon — facial, massage, and a refreshing pour.</p>
+              <div class="auction-card__meta">Donated by a local spa</div>
+              <div class="auction-card__price">Starting bid · $80</div>
+            </div>
+          </article>
+        </div>
+
+        <p class="reveal" style="text-align:center;margin-top:36px;color:var(--ink-soft);">Items pictured are representative; the full lineup is revealed at the Tour.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Want to give?</div>
+          <h2>Two beautiful ways to support the auction</h2>
+          <div class="flourish" aria-hidden="true">✦</div>
+        </div>
+        <div class="split">
+          <div class="card reveal" style="border-top:4px solid var(--green-700);">
+            <h3>Donate an item</h3>
+            <p>Are you an artist, business owner, or simply someone with a beautiful piece to share? We collect items each October and November.</p>
+            <ul class="bullet-list">
+              <li>Art, photography, pottery, jewelry</li>
+              <li>Gift certificates &amp; experiences</li>
+              <li>Themed gift baskets</li>
+              <li>Handmade keepsakes</li>
+            </ul>
+            <a class="btn btn--primary" href="mailto:civicleagueofgulfport@gmail.com?subject=Silent%20Auction%20donation">Donate an item →</a>
+          </div>
+          <div class="card reveal" style="border-top:4px solid var(--gold-500);">
+            <h3>Become a sponsor</h3>
+            <p>Sponsor a piece, a basket, or the auction itself. We'll recognize your business throughout the Tour and on our Facebook page.</p>
+            <ul class="bullet-list">
+              <li>Logo on auction signage</li>
+              <li>Recognition at the Tour</li>
+              <li>Social media thank-you</li>
+              <li>Tax-deductible contribution</li>
+            </ul>
+            <a class="btn btn--ghost" href="mailto:civicleagueofgulfport@gmail.com?subject=Silent%20Auction%20sponsorship">Become a sponsor →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--green">
+      <div class="container">
+        <div class="cta-banner reveal" style="background:linear-gradient(135deg,#10402a,#0a2916);">
+          <div>
+            <h2>See you December 7</h2>
+            <p>Bidding opens the afternoon of the Christmas Tour. Tickets are $20.</p>
+          </div>
+          <a class="btn btn--primary" href="christmas-tour.html">Tour details →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Civic League of Gulfport</h4>
+        <p>Serving special needs children and adults on the Mississippi Gulf Coast since 1947.</p>
+        <p><a href="https://www.facebook.com/people/Civic-League-of-Gulfport-MS/100076461381664/" target="_blank" rel="noopener">Follow us on Facebook →</a></p>
+      </div>
+      <div><h4>Visit</h4><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="scholarship.html">Scholarship</a></li>
+      </ul></div>
+      <div><h4>Events</h4><ul>
+        <li><a href="christmas-tour.html">Christmas Tour of Homes</a></li>
+        <li><a href="silent-auction.html">Silent Auction</a></li>
+      </ul></div>
+      <div><h4>Contact</h4><ul>
+        <li><a href="mailto:civicleagueofgulfport@gmail.com">civicleagueofgulfport@gmail.com</a></li>
+        <li>Gulfport, Mississippi</li>
+      </ul></div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Civic League of Gulfport, Mississippi. All rights reserved.</span>
+      <span>Flower: Gold Chrysanthemum · Colors: Green &amp; Gold</span>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>

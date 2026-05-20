@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Christmas Tour of Homes · Civic League of Gulfport</title>
+  <meta name="description" content="The Gulfport Civic League's annual Christmas Tour of Homes — held every December since 1959 to fund our work serving special needs children and adults on the Gulf Coast." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .xmas-hero {
+      position: relative; overflow: hidden;
+      background:
+        radial-gradient(900px 500px at 90% 10%, rgba(245, 192, 0, 0.25), transparent 60%),
+        radial-gradient(800px 500px at 0% 90%, rgba(15, 80, 40, 0.4), transparent 60%),
+        linear-gradient(160deg, #0a2916 0%, #061b0e 100%);
+      color: #f1ecd4;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .xmas-hero h1 { color: var(--gold-400); }
+    .xmas-hero .eyebrow { color: #cdc28b; }
+    .xmas-hero p { color: #ddd9bf; }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      max-width: 560px;
+      margin: 28px auto 0;
+    }
+    .countdown__cell {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 216, 74, 0.3);
+      border-radius: 14px;
+      padding: 18px 6px;
+      backdrop-filter: blur(4px);
+    }
+    .countdown__num {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--gold-400);
+      line-height: 1;
+      font-weight: 700;
+    }
+    .countdown__label {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #cdc28b;
+      margin-top: 6px;
+    }
+
+    .ornament {
+      font-family: var(--serif);
+      color: var(--gold-500);
+      text-align: center;
+      font-size: 1.4rem;
+      margin: 8px 0 18px;
+      letter-spacing: 0.4em;
+    }
+  </style>
+</head>
+<body>
+  <canvas class="snow-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Civic League of Gulfport home">
+        <img class="brand__mark" src="assets/logo.svg" alt="" />
+        <span class="brand__text">
+          <span class="brand__name">Civic League of Gulfport</span>
+          <span class="brand__sub">Since 1947 · Mississippi</span>
+        </span>
+      </a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="scholarship.html">Scholarship</a>
+        <a href="christmas-tour.html">Tour of Homes</a>
+        <a href="silent-auction.html">Silent Auction</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="position:relative;z-index:2;">
+    <section class="xmas-hero">
+      <div class="container">
+        <div class="eyebrow" style="text-transform:uppercase;letter-spacing:.35em;font-size:.78rem;font-weight:600;margin-bottom:10px;">A Gulf Coast Tradition Since 1959</div>
+        <h1>Christmas Tour of Homes</h1>
+        <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+        <p style="max-width:640px;margin:0 auto;">One magical December afternoon. Beautifully decorated Gulf Coast homes. All proceeds supporting children and adults with special needs.</p>
+        <div class="countdown" data-countdown="2026-12-06T13:30:00">
+          <div class="countdown__cell"><div class="countdown__num" data-d>—</div><div class="countdown__label">Days</div></div>
+          <div class="countdown__cell"><div class="countdown__num" data-h>—</div><div class="countdown__label">Hours</div></div>
+          <div class="countdown__cell"><div class="countdown__num" data-m>—</div><div class="countdown__label">Minutes</div></div>
+          <div class="countdown__cell"><div class="countdown__num" data-s>—</div><div class="countdown__label">Seconds</div></div>
+        </div>
+        <div class="btn-row" style="justify-content:center;margin-top:32px;">
+          <a class="btn btn--primary" href="mailto:civicleagueofgulfport@gmail.com?subject=Christmas%20Tour%20of%20Homes%20tickets">Reserve tickets — $20</a>
+          <a class="btn btn--ghost" style="border-color:var(--gold-400);color:var(--gold-400);" href="silent-auction.html">Browse the Silent Auction →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="reveal">
+          <h2>About the Tour</h2>
+          <p>The first Christmas Tour of Homes was held in <strong>1959</strong>, visiting the homes of Mr. and Mrs. Henry Haller, Mrs. M. M. Snelling, and Mr. and Mrs. A. J. Schultz. Through the years the homes on tour have ranged from Biloxi to Pass Christian, with most in Gulfport itself.</p>
+          <p>The Tour has been held every December since 1959 — pausing only three times in its history: 1969 for Hurricane Camille, 2005 for Hurricane Katrina, and 2020 for the global pandemic.</p>
+          <p>It is the League's only fundraiser. <strong>Every dollar from ticket sales supports our projects and scholarships.</strong></p>
+        </div>
+        <div class="reveal">
+          <div class="card" style="border-top:4px solid var(--green-700);">
+            <h3>The 2026 Tour</h3>
+            <ul class="bullet-list">
+              <li><strong>Sunday, December 7, 2026</strong></li>
+              <li>Stations open by 1:30 PM</li>
+              <li>Self-guided across multiple Gulf Coast homes</li>
+              <li>Tickets: <strong>$20</strong> per person</li>
+              <li>Refreshments, music, and Mississippi hospitality</li>
+            </ul>
+            <a class="btn btn--primary btn--block" style="margin-top:14px;" href="mailto:civicleagueofgulfport@gmail.com?subject=Christmas%20Tour%20tickets">Email to reserve tickets</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">How it works</div>
+          <h2>Your afternoon, gift-wrapped</h2>
+          <div class="flourish" aria-hidden="true">✦</div>
+        </div>
+        <div class="grid">
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">🎟</div>
+            <h3>Get your ticket</h3>
+            <p>$20 per person. Reserve through any League member or by emailing us. Children, friends, and neighbors all welcome.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">🏡</div>
+            <h3>Tour the homes</h3>
+            <p>Visit each home on the tour, in any order you like, between the published hours. League hostesses greet you at every door.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">🎁</div>
+            <h3>Bid in the auction</h3>
+            <p>End your afternoon at the Silent Auction — gifts donated by area artists and businesses, all benefiting the same projects.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">💚</div>
+            <h3>Your dollars go to work</h3>
+            <p>From Backpack Buddies to scholarships, every ticket sold and basket bid on funds the year ahead.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">A little history</div>
+          <h2>Sixty-six tours and counting</h2>
+          <div class="flourish" aria-hidden="true">✦</div>
+          <p>Through hurricanes and pandemics, this tradition has carried on because Gulf Coast neighbors keep opening their doors.</p>
+        </div>
+        <ol class="timeline reveal">
+          <li><div class="year">1959</div><p>The first Tour visits the Haller, Snelling, and Schultz homes.</p></li>
+          <li><div class="year">1969</div><p>Hurricane Camille — the only cancellation in the Tour's first decade.</p></li>
+          <li><div class="year">2005</div><p>Hurricane Katrina — the Tour pauses; the League refocuses on relief work.</p></li>
+          <li><div class="year">2020</div><p>The global pandemic — the Tour pauses for the third and only other time in its history.</p></li>
+          <li><div class="year">2026</div><p>Sunday, December 7 — the next chapter, with you in it.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--green">
+      <div class="container">
+        <div class="pullquote reveal">
+          We are always so thankful to the homeowners who so graciously open their homes for our tour.
+          <cite>— The Civic League</cite>
+        </div>
+        <div class="btn-row reveal" style="justify-content:center;">
+          <a class="btn btn--primary" href="mailto:civicleagueofgulfport@gmail.com?subject=I'd%20like%20to%20host%20a%20home%20on%20the%20Tour">Host your home →</a>
+          <a class="btn btn--ghost" style="border-color:var(--gold-400);color:var(--gold-400);" href="silent-auction.html">Donate to the auction →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Civic League of Gulfport</h4>
+        <p>Serving special needs children and adults on the Mississippi Gulf Coast since 1947.</p>
+        <p><a href="https://www.facebook.com/people/Civic-League-of-Gulfport-MS/100076461381664/" target="_blank" rel="noopener">Follow us on Facebook →</a></p>
+      </div>
+      <div><h4>Visit</h4><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="scholarship.html">Scholarship</a></li>
+      </ul></div>
+      <div><h4>Events</h4><ul>
+        <li><a href="christmas-tour.html">Christmas Tour of Homes</a></li>
+        <li><a href="silent-auction.html">Silent Auction</a></li>
+      </ul></div>
+      <div><h4>Contact</h4><ul>
+        <li><a href="mailto:civicleagueofgulfport@gmail.com">civicleagueofgulfport@gmail.com</a></li>
+        <li>Gulfport, Mississippi</li>
+      </ul></div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Civic League of Gulfport, Mississippi. All rights reserved.</span>
+      <span>Flower: Gold Chrysanthemum · Colors: Green &amp; Gold</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Update countdown target to the next Christmas Tour each year
+    (function () {
+      const node = document.querySelector('[data-countdown]');
+      if (!node) return;
+      const now = new Date();
+      const year = now.getMonth() > 11 || (now.getMonth() === 11 && now.getDate() > 7) ? now.getFullYear() + 1 : now.getFullYear();
+      node.dataset.countdown = year + '-12-07T13:30:00';
+    })();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
