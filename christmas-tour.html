@@ -97,7 +97,7 @@
         <h1>Christmas Tour of Homes</h1>
         <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
         <p style="max-width:640px;margin:0 auto;">One magical December afternoon. Beautifully decorated Gulf Coast homes. All proceeds supporting children and adults with special needs.</p>
-        <div class="countdown" data-countdown="2026-12-06T13:30:00">
+        <div class="countdown" data-countdown="2026-12-06T13:30:00" data-target-month="12" data-target-day="6">
           <div class="countdown__cell"><div class="countdown__num" data-d>—</div><div class="countdown__label">Days</div></div>
           <div class="countdown__cell"><div class="countdown__num" data-h>—</div><div class="countdown__label">Hours</div></div>
           <div class="countdown__cell"><div class="countdown__num" data-m>—</div><div class="countdown__label">Minutes</div></div>
@@ -122,7 +122,7 @@
           <div class="card" style="border-top:4px solid var(--green-700);">
             <h3>The 2026 Tour</h3>
             <ul class="bullet-list">
-              <li><strong>Sunday, December 7, 2026</strong></li>
+              <li><strong>Sunday, December 6, 2026</strong></li>
               <li>Stations open by 1:30 PM</li>
               <li>Self-guided across multiple Gulf Coast homes</li>
               <li>Tickets: <strong>$20</strong> per person</li>
@@ -179,8 +179,25 @@
           <li><div class="year">1969</div><p>Hurricane Camille — the only cancellation in the Tour's first decade.</p></li>
           <li><div class="year">2005</div><p>Hurricane Katrina — the Tour pauses; the League refocuses on relief work.</p></li>
           <li><div class="year">2020</div><p>The global pandemic — the Tour pauses for the third and only other time in its history.</p></li>
-          <li><div class="year">2026</div><p>Sunday, December 7 — the next chapter, with you in it.</p></li>
+          <li><div class="year">2026</div><p>Sunday, December 6 — the next chapter, with you in it.</p></li>
         </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">From the Tour</div>
+          <h2>An afternoon among friends</h2>
+          <div class="flourish" aria-hidden="true">✦</div>
+          <p>A glimpse of our hostesses and guests welcoming visitors at a recent Tour.</p>
+        </div>
+        <div class="reveal">
+          <div class="photo-banner">
+            <img src="assets/photos/tour-volunteers.jpg" alt="Civic League hostesses welcoming guests at the Christmas Tour of Homes" loading="lazy" onerror="this.style.display='none'" />
+            <div class="photo-banner__caption">Hostesses welcoming guests at the Christmas Tour of Homes</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -191,8 +208,7 @@
           <cite>— The Civic League</cite>
         </div>
         <div class="btn-row reveal" style="justify-content:center;">
-          <a class="btn btn--primary" href="mailto:civicleagueofgulfport@gmail.com?subject=I'd%20like%20to%20host%20a%20home%20on%20the%20Tour">Host your home →</a>
-          <a class="btn btn--ghost" style="border-color:var(--gold-400);color:var(--gold-400);" href="silent-auction.html">Donate to the auction →</a>
+          <a class="btn btn--primary" href="silent-auction.html">Donate to the auction →</a>
         </div>
       </div>
     </section>
@@ -228,13 +244,24 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Update countdown target to the next Christmas Tour each year
+    // Roll the countdown target to next year's Tour once this year's Tour is past.
     (function () {
       const node = document.querySelector('[data-countdown]');
       if (!node) return;
       const now = new Date();
-      const year = now.getMonth() > 11 || (now.getMonth() === 11 && now.getDate() > 7) ? now.getFullYear() + 1 : now.getFullYear();
-      node.dataset.countdown = year + '-12-07T13:30:00';
+      // Tour is the first Sunday of December (Dec 6, 2026).
+      // After that date passes, roll to the equivalent first Sunday next year.
+      const thisYearTarget = new Date(now.getFullYear(), 11, 6, 13, 30, 0);
+      let target = thisYearTarget;
+      if (now > thisYearTarget) {
+        // Move to next year, find the first Sunday of December.
+        const nextYear = now.getFullYear() + 1;
+        const dec1 = new Date(nextYear, 11, 1);
+        const firstSunday = 1 + ((7 - dec1.getDay()) % 7);
+        target = new Date(nextYear, 11, firstSunday, 13, 30, 0);
+      }
+      const pad = n => String(n).padStart(2, '0');
+      node.dataset.countdown = target.getFullYear() + '-' + pad(target.getMonth()+1) + '-' + pad(target.getDate()) + 'T13:30:00';
     })();
   </script>
   <script src="js/main.js"></script>

@@ -112,7 +112,7 @@
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) draw();
 })();
 
-// Countdown to Tour of Homes (December 7)
+// Countdown to Tour of Homes (December 6, 2026)
 (function () {
   const node = document.querySelector('[data-countdown]');
   if (!node) return;
